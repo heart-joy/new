@@ -18,7 +18,7 @@ def task(threadName, number, char):
     while number > 0:
         sleep(1)
         current_time = time.strftime("%H:%M:%S", time.localtime())
-        print(f"[{current_time}]{threadName}: {char}")
+        print(f"[{current_time}]{threadName}: {char}/n")
         number -= 1
         
 thread1 = MyThread(4,'A')
