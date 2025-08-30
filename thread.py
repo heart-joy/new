@@ -7,7 +7,10 @@ class MyThread(threading.Thread):
         threading.Thread.__init__(self)
         self.number = number
         self.char = char
+<<<<<<< HEAD
         self.daemon = True
+=======
+>>>>>>> refs/remotes/new/main
 
     def run(self):
         print(f"starting thread {self.name}")
@@ -18,7 +21,11 @@ def task(threadName, number, char):
     while number > 0:
         sleep(1)
         current_time = time.strftime("%H:%M:%S", time.localtime())
+<<<<<<< HEAD
         print(f"[{current_time}]{threadName}: {char}\n")
+=======
+        print(f"[{current_time}]{threadName}: {char}")
+>>>>>>> refs/remotes/new/main
         number -= 1
         
 thread1 = MyThread(4,'A')
@@ -27,4 +34,8 @@ thread2 = MyThread(2,'B')
 thread1.start()
 thread2.start()
 
+<<<<<<< HEAD
 time.sleep(5)
+=======
+sleep(3)
+>>>>>>> refs/remotes/new/main
