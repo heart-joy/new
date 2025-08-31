@@ -9,7 +9,7 @@ def task(threadName, number):
         current_time = time.strftime("%H:%M:%S", time.localtime())
         print(f"[{current_time}]{threadName}: {number}/n")
         number -= 1
-    print(f"exiting thread {threadName}")
+    print(f"thread {threadName} finished")
     
 lock = threading.Lock()
 data_list = [0,0,0,0]
@@ -17,3 +17,4 @@ data_list = [0,0,0,0]
 thread1 = MyThread(1)
 thread2 = MyThread(2)
 thread3 = MyThread(3)
+

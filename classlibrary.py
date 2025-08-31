@@ -9,3 +9,5 @@ class MyThread(threading.Thread):
         task(self.name, self.number)
         lock.release()
 
+    def _del_(self):
+        print(f"exiting thread {self.name}")
