@@ -9,6 +9,12 @@ def add():
     for i in range(1000000):
         num += 1
     lock.release()
+    
+#def add():
+#    with lock: withlock语句块结束会自动释放锁
+#       global num
+#       for i in range(1000000):
+#           num += 1
 
 def sub():
     lock.acquire()
@@ -16,6 +22,7 @@ def sub():
     for i in range(1000000):
         num -= 1
     lock.release()
+    
     
 lock = threading.Lock()
 
