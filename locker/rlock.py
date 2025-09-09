@@ -1,6 +1,7 @@
 import threading
 
 lock = threading.RLock()
+num = 0
 
 def add():
     global num
